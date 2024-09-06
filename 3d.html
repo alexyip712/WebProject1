@@ -59,8 +59,13 @@
                             3D
                         </a>
                         <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item fw-bold active" href="3d.html">Air-Con</a></li>
-                            <li><a class="dropdown-item link-light" href="house3d.html">House</a></li>
+                            <li><a class="dropdown-item fw-bold active" href="3d.html#navbarScroll">Air-Con</a></li>
+                            <li><a class="dropdown-item link-light" href="house3d.html#navbarScroll">House</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item link-light" target="_blank" href="assets/house.png">Original
+                                    Photo</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,18 +73,56 @@
         </div>
     </nav>
     <main>
+        <!--style>
+            #parent {
+                position: relative;
+             }
+            #leftbox {
+                float: left;
+                background: Red;
+                width: 15%;
+                height: 280px;
+                position: absolute;
+            }
+        
+            #middlebox {
+                float: left;
+                background: Green;
+                width: 50%;
+                height: 280px;
+                position: absolute;
+            }
+            
+            #progress-container{
+                float: left;
+                background: Green;
+                width: 70%;
+                height: 280px;
+                position: absolute;
+
+            }
+        
+            #rightbox {
+                float: right;
+                background: blue;
+                width: 15%;
+                height: 280px;
+                position: absolute;
+            }
+        </style-->
 
         <body class=" bg-dark">
-            <div class="container">
-                <!--div class=" btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary" id="ac">AC</button>
-                    <button type="button" class="btn btn-secondary" id="house">House</button>
-                </div-->
+            <div class="container" id="parent">
+                <div class="row">
+                    <div class="col" id="leftbox"></div>
+                    <div class="col" id="middlebox">
+                        <div id="progress-container">
+                            <script type="module" src="js/3d.js"></script>
+                        </div>
+                    </div>
+                    <div class="col" id="rightbox"></div>
+                </div>
             </div>
-
-            <div id="progress-container">
-            </div>
-            <script type="module" src="js/3d.js"></script>
         </body>
     </main>
     <footer class="bg-secondary text-light text-center fixed-bottom p-2">

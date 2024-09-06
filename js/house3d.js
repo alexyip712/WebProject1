@@ -23,7 +23,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
 controls.minDistance = 2.8;
-controls.maxDistance = 10;
+controls.maxDistance = 12;
 controls.minPolarAngle = 0.5;
 controls.maxPolarAngle = 1.6;
 controls.maxAzimuthAngle = 1.2;
@@ -32,7 +32,7 @@ controls.autoRotate = false;
 controls.target = new THREE.Vector3(0, 1.5, 0);
 controls.update();
 
-const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
+const groundGeometry = new THREE.PlaneGeometry(2000, 2000, 32, 32);
 groundGeometry.rotateX(-Math.PI / 2);
 const groundMaterial = new THREE.MeshStandardMaterial({
     color: 0x85877e,

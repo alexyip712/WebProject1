@@ -22,12 +22,12 @@ camera.position.set(4, 5, 11);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
-controls.minDistance = 1;
-controls.maxDistance = 2;
+controls.minDistance = 1.5;
+controls.maxDistance = 2.3;
 controls.minPolarAngle = 0;
 controls.maxPolarAngle = 2;
 controls.autoRotate = false;
-controls.target = new THREE.Vector3(0, 0.5, 0);
+controls.target = new THREE.Vector3(0, 0.7, 0);
 controls.update();
 
 const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
@@ -80,7 +80,7 @@ loader.load('ACv2.gltf', (gltf) => {
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, (window.innerHeight));
 });
 
 function animate() {
