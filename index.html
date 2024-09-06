@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Alex Yip's Page</title>
+    <link rel="icon" href="assets/cat.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src=""></script>   
+  </head>
+  <body>
+    <header class = "p-3 bg-dark text-warning text-left container">
+      <h1 >
+        <a href="index.html"><img src="assets/cat.jpg" alt="cat" width="60" height="60" class="rounded float-left border border-success" href="index.html"></a>
+        <span class="align-middle" >Alex Yip's Page</span> 
+      </h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>             
+          <div class="collapse navbar-collapse justify-content-left" id="navbarScroll">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class=" nav-link active fw-bold link-dark" href="index.html" >Main</a>
+              </li-->
+              <li class="nav-item px-2">
+                <a class="nav-link link-light" href="game.html#navbarScroll">Unity 2D Game</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link link-light" href="git.html">GitHub</a>   
+              </li>                    
+            </ul>                   
+          </div>                  
+      </div>                
+    </nav>
+    <main >
+      <body class = "bg-dark text-light ">
+        <div class="container border border-2 mt-2 ">
+          <p><h3 class="border-bottom">Education</h3></p>
+          <div class="row">
+            <div class="col fw-bold"><h4>The Hong Kong Polytechnic University</h4></div>
+            <div class="col text-end">Sep 2021 – May 2025 (Expected)</div>
+          </div>
+          <div>BSc (Hons) Internet and Multimedia Technologies</div>
+          <br/>
+          <div><h5>Relevant Courses: </h5>Computer Animation, Computer Game Development, Computer Systems Principles, Database System, Digital Video Production & Broadcasting, Mobile Systems & Application Development, Object-Oriented Design & Programming, Web Systems & Technologies</div>
+          <br/>
+          <p><h3 class="border-bottom">School Project</h3></p>
+          <div class="row">
+            <div class="col"><div class=" fw-bold">iOS Calculator Application | Swift</div>
+              <ul>
+                <li>Designed and developed a calculator application for iOS.</li>
+                <li>Demonstrated user interface using Swift and Swift UI.</li>
+                <li>Implemented logic of the calculator.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col"><div class=" fw-bold">Unity Game Project | C#</div>
+            <ul>
+              <li>Designed and developed a 2D game in C# with Unity.</li>
+              <li>Game Link: <a href="game.html#navbarScroll">Unity 2D Game</a></li>
+              <li>Github Link: <a href="https://alexyip712.github.io/SD3985_Game/" target="_blank">https://alexyip712.github.io/SD3985_Game/</a></li>
+            </ul></div>
+          </div>
+          <div class="row">
+            <div class="col"><div class=" fw-bold">Concert Ticket Selling Website | HTML, CSS, JavaScript, MongoDB</div>
+            <ul>
+              <li>Designed and developed a website for selling concert tickets.</li>
+              <li>Implemented a web application infrastructure using Node.js, Express.js, and MongoDB.</li>
+              <li>Demonstrated in front-end technologies such as HTML, CSS, and JavaScript.</li>
+            </ul></div>
+            <div class="fw-bold">GitHub Profile: <a href="https://github.com/alexyip712" target="_blank">https://github.com/alexyip712</a></div>
+          </div>
+          <p><h3 class="border-bottom">Skill</h3></p>
+          <div class="mb-1"><span class="fw-bold">Languages: </span>Python, C++, C#, Java, HTML, CSS, JavaScript, SQL, Swift</div>      
+          <div class="mb-3"><span class="fw-bold">Tool & Technologies: </span>Unity, 3Ds Max, Node.js, NumPy, Bootstrap, Android Studio, Apple Developer, Arduino, Git, Premiere Pro, Photoshop, Microsoft Office Suite</div>    
+        </div>        
+      </body>      
+    </main>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer class="bg-secondary text-light text-center fixed-bottom p-2">
+      <div class="container">
+        <div class="container ">           
+          <div class="row">
+            <div class="col"></div>
+            <div class="col align-text-bottom" id="time"></div>
+            <div class="col text-end">
+              <a href="https://github.com/alexyip712" target="_blank"><img src="assets/git.png" alt="git" width="40" height="40"></a>
+              <a href="https://www.linkedin.com/in/ling-shan-yip-38023a2b5/" target="_blank"><img src="assets/link.png" alt="link" width="40" height="40"  href="index.html"></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>  
+    </footer>
+  </body>
+  <script>
+    const d = new Date();
+    let text = d.toLocaleString('en-GB');
+    document.getElementById('time').innerHTML = text;
+  </script>
+</html>
