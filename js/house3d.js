@@ -1,6 +1,10 @@
+
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { Sky } from 'three/addons/objects/Sky.js';
+import { MathUtils } from './MathUtils.js'
+import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -8,6 +12,7 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000);
 renderer.setPixelRatio(window.devicePixelRatio);
+renderer.toneMappingExposure = 0.5;
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -39,14 +44,23 @@ const groundMaterial = new THREE.MeshStandardMaterial({
     side: THREE.DoubleSide
 });
 
+const sky=new Sky();
+sky.scale.setScalar( 45000 );
+const phi = MathUtils.degToRad( -3 );
+const theta = MathUtils.degToRad( 160 );
+const sunPosition = new THREE.Vector3().setFromSphericalCoords( 1, phi, theta );
+sky.material.uniforms.sunPosition.value = sunPosition;
+scene.add(sky);
+
 const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
 groundMesh.castShadow = false;
 groundMesh.receiveShadow = true;
 scene.add(groundMesh);
 
-const DLight = new THREE.DirectionalLight(0xFFFFFF, 1.0);
-DLight.position.set(2,10,1);
+const DLight = new THREE.DirectionalLight(0xFFFFFF, 9.0);
+DLight.position.set(2,10,5);
 DLight.target.position.set(0,0,0);
+DLight.castShadow = true;
 scene.add(DLight);
 
 const spotLight = new THREE.SpotLight(0xffffff, 3000, 100, 0.22, 1);
@@ -102,6 +116,4 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-
 animate();
-

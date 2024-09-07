@@ -41,14 +41,14 @@
           </li>
           <li class="nav-item dropdown px-2">
             <a class="nav-link dropdown-toggle link-light " href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                3D
+              data-bs-toggle="dropdown" aria-expanded="false">
+              3D
             </a>
             <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item link-light" href="3d.html#navbarScroll">Air-Con</a></li>
-                <li><a class="dropdown-item link-light" href="house3d.html#navbarScroll">House</a></li>
+              <li><a class="dropdown-item link-light" href="3d.html#navbarScroll">Air-Con</a></li>
+              <li><a class="dropdown-item link-light" href="house3d.html#navbarScroll">House</a></li>
             </ul>
-        </li>
+          </li>
         </ul>
       </div>
     </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="col text-end mt-2 pt-2 mb-2">
             <a href="https://github.com/alexyip712" target="_blank"><img src="assets/git.png" alt="git" width="40"
-              height="40"></a>
+                height="40"></a>
 
             <!--div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -84,7 +84,8 @@
           <thead>
             <tr>
               <th scope="col">Name</th>
-              <th scope="col"><button type="button" class="btn btn-secondary fw-bold" onclick="sort()">Created Date↕</button></th>
+              <th scope="col"><button type="button" class="btn btn-secondary fw-bold" onclick="sort()">Created
+                  Date↕</button></th>
               <th scope="col">Language</th>
               <th scope="col">Link</th>
             </tr>
@@ -100,12 +101,14 @@
   <br />
   <br />
   <br />
-  <footer class="bg-secondary text-light text-center fixed-bottom p-2">
+  <footer class="bg-secondary text-light text-center fixed-bottom pt-2">
     <div class="container">
       <div class="container ">
         <div class="row">
           <div class="col"></div>
-          <div class="col align-text-bottom" id="time"></div>
+          <div class="col-6 align-text-bottom" id="">yiplingshan712@gmail.com | ling-shan.yip@connect.polyu.hk
+            <p id="time"></p>
+          </div>
           <div class="col text-end">
             <a href="https://github.com/alexyip712" target="_blank"><img src="assets/git.png" alt="git" width="40"
                 height="40"></a>
@@ -117,11 +120,12 @@
 
     </div>
   </footer>
+  <script>
+    const d = new Date();
+    let text = d.toLocaleString('en-GB');
+    document.getElementById('time').innerHTML = text;
+  </script>
 </body>
-<script>
-  const d = new Date();
-  let text = d.toLocaleString('en-GB');
-  document.getElementById('time').innerHTML = text;
-</script>
+
 
 </html>
